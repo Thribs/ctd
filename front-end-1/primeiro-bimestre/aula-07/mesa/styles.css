@@ -1,0 +1,7 @@
+h1 {
+    background-image: url("https://picsum.photos/400/300");
+    width: 1280px;
+    height: 720px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+/*
+- cor de fundo da tag body em modo hexadecimal no valor #131313
+- cor do texto da tag h1 em cor predefinida de nome ‘white’
+- fonte do texto da tag h1 para Roboto
+- altura da classe media-picture em 400px
+- imagem de fundo da classe media-picture à sua escolha
+- cor do texto da classe review-score em cor predefinida de nome ‘white’
+- cor do fundo da classe review-score em modo hexadecimal no valor #e6bd09
+- padding na classe review-score com valor de 12px
+- cor de texto da tag h2 em cor predefinida de nome ‘steelblue’
+- cor do texto da tag p em modo hexadecimal no valor #bdbdbd
+- fonte do texto da tag p para Roboto
+- cor de texto da tag a em cor predefinida de nome ‘yellow’
+
+*/
+
+body {
+  background-color: #131313;
+}
+
+h1 {
+  font-family: Roboto;
+  color: white;
+}
+
+.media-picture {
+  height: 400px;
+
+  background-image: url("https://source.unsplash.com/random/?movie");
+  background-size: cover;
+}
+
+.review-score {
+  background-color: #e6bd09;
+
+  padding: 12px;
+}
+
+h2 {
+  color: steelblue;
+}
+
+p {
+  font-family: Roboto;
+  color: #bdbdbd;
+}
+
+a {
+  color: yellow;
+}

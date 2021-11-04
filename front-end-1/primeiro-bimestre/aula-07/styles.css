@@ -1,0 +1,38 @@
+body {
+    text-align: center;
+}
+
+div {
+    background-color: aquamarine;
+    /* height: 400px; */
+    width: 600px;
+    padding: 24px;
+    border: 3px blue solid;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 0;
+    padding-left: 24px;
+}
+
+p {
+    background-color: brown;
+    margin-top: 40px;
+}
+
+.circle {
+    margin-top: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+button {
+
+    height: 100px;
+    width: 50%;
+    margin: 24px auto;
+    display: block;
+    border-radius: 40px;
+}
