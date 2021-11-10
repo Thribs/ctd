@@ -25,5 +25,35 @@ li a {
 }
 
 body {
-    background: url('https://source.unsplash/random/?page');
+    background: url('https://source.unsplash.com/random/?page');
+    background-size: cover;
+}
+
+.product-wrapper {
+    display: inline;
+    padding-left: 12px;
+}
+
+.product-wrapper img{
+    width: 300px;
+    height: 200px;
+    display: inline-block;
+}
+
+.product-wrapper button {
+    position: relative;
+    padding: 20px;
+    right: 190px;
+    bottom: 80px;
+    font-size: 1.2rem;
+}
+
+.whatsapp-button img{
+    width: 70px;
+    height: 70px;
+
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    border-radius: 50%;
 }
