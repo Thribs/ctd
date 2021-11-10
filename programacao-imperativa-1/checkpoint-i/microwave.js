@@ -16,15 +16,13 @@ function item_time(item) {
       return beans_time;
     case "brigadeiro":
       return brigadeiro_time;
-    default:
-      return 0;
   }
 }
 
 function cook(item, time) {
   const correct_time = item_time(item);
 
-  if (correct_time == 0) {
+  if (!correct_time) {
     console.log(`Prato ${item} não encontrado`);
     return;
   }
@@ -44,16 +42,9 @@ function cook(item, time) {
   console.log("Prato pronto. Bom apetite!");
 }
 
-cook('batata', 50);
-cook('pipoca', 8);
-cook('macarrão', 18);
-cook('carne', 50);
-cook('feijão', -10);
-cook('brigadeiro', 9);
-
-// function cook(item, time) {
-//     const item_time = item_time(item)
-//     switch(time) {
-
-//     }
-// }
+cook("batata", 50);
+cook("pipoca", 8);
+cook("macarrão", 18);
+cook("carne", 50);
+cook("feijão", -10);
+cook("brigadeiro", 9);
