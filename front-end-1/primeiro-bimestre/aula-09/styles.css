@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    width: 100%;
+    background-color: rgb(23, 199, 199);
+    position: fixed;
+}
+
+header ul {
+    list-style: none;
+    padding: 4px;
+}
+
+li {
+    display: inline;
+    margin: 12px;
+    margin-top: 0;
+}
+
+li a {
+    text-decoration: none;
+    color: indigo;
+}
+
+body {
+    background: url('https://source.unsplash/random/?page');
+}

@@ -1,0 +1,71 @@
+
+
+.square {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 12px;
+}
+
+body {
+    height: 2000px;
+}
+header, .page-title {
+    z-index: 100;
+}
+
+header {
+    width: 100%;
+
+    background-color: teal;
+    padding: 12px 32px;
+    position: fixed;
+    top: 20px;
+}
+
+.page-title {
+    width: 100%;
+
+    position: fixed;
+    background-color: thistle;
+
+    text-align: center;
+}
+
+.first-square {
+    background-color: yellow;
+    position: absolute;
+    right: 48px;
+    top: 48px;
+}
+
+.second-square {
+    background-color: red;
+    position: relative;
+    /* right: 10px; */
+}
+
+.third-square {
+    background-color: blue;
+    /* position: fixed; */
+}
+
+.card {
+    width: 400px;
+    height: 80px;
+    border: 1px solid black;
+    margin: 200px auto;
+    padding: 20px;
+    border-radius: 12px;
+    position: relative;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    background-color: red;
+    border-radius: 50%;
+
+    position: absolute;
+    top: -40px;
+
+}
