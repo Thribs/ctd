@@ -21,19 +21,22 @@ const item_time = (item) => {
 
 const cook = (item, time) => {
   const correct_time = item_time(item);
+  const foodIsRaw = time < correct_time;
+  const foodHasBurned = time >= correct_time * 2 && time < correct_time * 3;
+  const foodHasExploded = time >= correct_time * 3;
 
   switch (true) {
     case !correct_time:
       return `Prato ${item} não encontrado`;
-      
-    case time < correct_time:
+
+    case foodIsRaw:
       return "Tempo insuficiente";
 
-    case time >= correct_time * 3:
-      return "Kaboom!";
-
-    case time >= correct_time * 2:
+    case foodHasBurned:
       return `O(a) ${item} queimou`;
+
+    case foodHasExploded:
+      return "Kaboom!";
 
     default:
       return "Prato pronto. Bom apetite!";
