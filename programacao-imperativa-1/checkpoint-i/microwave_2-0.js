@@ -17,7 +17,7 @@ const item_time = (item) => {
     case "brigadeiro":
       return brigadeiro_time;
   }
-}
+};
 
 const cook = (item, time) => {
   const correct_time = item_time(item);
@@ -25,6 +25,7 @@ const cook = (item, time) => {
   switch (true) {
     case !correct_time:
       return `Prato ${item} não encontrado`;
+      
     case time < correct_time:
       return "Tempo insuficiente";
 
@@ -33,6 +34,7 @@ const cook = (item, time) => {
 
     case time >= correct_time * 2:
       return `O(a) ${item} queimou`;
+
     default:
       return "Prato pronto. Bom apetite!";
   }
