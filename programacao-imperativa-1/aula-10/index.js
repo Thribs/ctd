@@ -27,23 +27,26 @@ console.log(grupoDeAmigos[2][grupoDeAmigos[2].length - 1]);
 // Array Invertido
 // Neste exercício, você terá que criar uma função que retorne um array com seus elementos invertidos, sem modificá-lo. Então, você deve fazer uma função que o modifique e inverta a ordem de seus elementos.
 // 1. Crie a função imprimirInverso que pega um Array como um argumento e imprime cada elemento em ordem reversa no console (você não precisa inverter o Array).
+
 function imprimirInverso(umArray) {
     console.log(umArray[2]);
     console.log(umArray[1]);
     console.log(umArray[0]);
 }
-
 imprimirInverso(['teste',1,2])
-// 2. Crie a função inverter que recebe um Array como argumento e retorna um novo invertido.
-function inverter(umArray) {
-    const novo = [];
-    novo[0] = umArray[2];
-    novo[1] = umArray[1];
-    novo[2] = umArray[0]
-    return novo
-}
 
+// 2. Crie a função inverter que recebe um Array como argumento e retorna um novo invertido.
+function inverter(velho) {
+  const novo = [];
+  novo[0] = velho[2];
+  novo[1] = velho[1];
+  novo[2] = velho[0];
+  return novo
+}
 console.log(inverter(['teste',1,2]));
+
+function inverterEficiente(umArray) {return umArray.reverse()};
+console.log(inverterEficiente(['teste',1,2]));
 
 //somarArray();
 // Neste exercício, você criará uma função somarArray() que aceita um array de números e retorna a soma de todos eles.
@@ -51,12 +54,36 @@ console.log(inverter(['teste',1,2]));
 somarArray([1, 2, 3]); // 6
 somarArray([10, 3, 10, 4]); // 27
 somarArray([-5, 100]); // 95
+function somarArray(umArray) {
+  let soma = 0;
+  soma += umArray.pop();
+  soma += umArray.pop();
+  soma += umArray.pop();
+  soma += umArray.pop();
+  soma += umArray.pop();
+  return soma;
+}
+somarArray([5, 10, 20, 5, -5, 'a']);
+
 // Simulação Array.join()
 // Neste exercício, você criará uma função chamada join que recebe um array e simula o comportamento do método Array.join().
 // Importante: Não poderá utilizar o método Array.join() original.
 // Por exemplo:
 join(["o", "l", "á"]); //deve retornar a string "olá".
 join(["t", "c", "h", "a", "u"]); //deve retornar a string "tchau".
+function join(umArray) {
+  const concat = "";
+
+  concat += umArray[0];
+  concat += umArray[1];
+  concat += umArray[2];
+  concat += umArray[3];
+  concat += umArray[4];
+
+  return concat;
+}
+
+console.log(join(['a','r','r','a','y']));
 
 // Coleções de Filmes (e mais…)
 // O tech leader da equipe precisa conhecer a estrutura de dados do novo projeto. Para isso, devemos:
