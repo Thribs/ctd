@@ -1,0 +1,36 @@
+header img {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+}
+
+h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+body {
+    background: url('https://source.unsplash.com/random/?');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    height: 2000px;
+}
+
+.form-wrapper {
+    width: 60vw;
+    margin: 0 auto;
+}
+
+form {
+    background: white;
+    padding: 4px;
+    
+}
+
+label, input, textarea, select, button {
+    display: block;
+
+    margin: 12px 0 0 12px;
+}
