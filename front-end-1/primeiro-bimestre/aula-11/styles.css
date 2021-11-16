@@ -1,0 +1,41 @@
+body {
+    height: 2000px;
+}
+
+h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+form {
+    margin-top: 12px;
+    margin-left: 12px;
+}
+
+label, button {
+    margin-top: 12px;
+}
+
+label, input, textarea, select, button {
+    display: block;
+    margin-left: 6px;
+}
+
+.submit::before {
+    content: "-> "
+}
+
+.reset {
+    color: red;
+    border: none;
+    text-decoration: underline;
+}
+
+.options-container label, .options-container input {
+    display: inline;
+}
+
+fieldset {
+    border: 1px solid
+}
