@@ -1,0 +1,41 @@
+footer h1:hover {
+    color: purple;
+}
+
+p::first-line {
+    text-decoration: underline;
+}
+
+p::first-letter {
+    font-size: 36px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+input {
+    outline: 0;
+}
+
+input:focus {
+    border: 2px solid purple;
+}
+
+input:checked {
+    accent-color: red;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline;
+    border-radius: 12px;
+    background: lime;
+    padding: 12px 20px;
+    margin: 12px 8px;
+}
+
+li:nth-child(1) {
+    background: aqua;
+}

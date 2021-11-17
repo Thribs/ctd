@@ -2,6 +2,7 @@ function somarArray(umArray) {
   let soma = 0;
   while (umArray.length) {
     const item
+    // TODO: if item is a string, ignore the iteration
     soma += umArray.pop();
   }
   return soma;

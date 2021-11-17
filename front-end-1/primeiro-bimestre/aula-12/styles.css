@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+:root {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    padding: 32px;
+}
+
+.main-menu li {
+    background: gray;
+    color: white;
+
+    width: fit-content;
+    padding: 12px;
+    margin-bottom: 12px;
+
+    border-radius: 12px;
+
+}
+
+.main-menu li:nth-child(2n+2) {
+    background: salmon;
+}
+
+.main-menu li::before {
+
+    content: '👀';
+    
+}
+
+label {
+    font-size: 16px;
+}
+
+.name-input {
+    background: #b8b8b8;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 12px;
+    margin-left: 12px;
+
+    transition: .4s;
+}
+
+
+.name-input:focus {
+    background: rgb(218, 218, 218);
+}
+
+.option-checkbox {
+    width: 15px;
+    height: 15px;
+    transition: 4s;
+    accent-color: red;
+}
+
+.option-checkbox:hover {
+
+    margin-left: 230px;
+    accent-color: orange;
+
+}
+
+.option-checkbox:checked {
+    width: 30px;
+    height: 30px;
+}
+
+.main-button {
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    background: lime;
+    border-radius: 12px;
+
+    transition: .4s;
+}
+
+.main-button:hover {
+
+    color: black;
+    font-weight: bold;
+    background: turquoise;
+    background-size: cover;
+
+}
+
+P::first-line {
+    background: yellow;
+}
+
+p::first-letter {
+    font-size: 32px;
+}
