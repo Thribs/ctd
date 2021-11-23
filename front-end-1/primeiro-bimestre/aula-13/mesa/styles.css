@@ -1,0 +1,68 @@
+div, img, button {
+    display: block;
+    margin: 0 0 40px 10px;
+}
+    /* Animar uma imagem de bola indo da esquerda para a direita com @keyframe, sendo que no começo da transição ela está invisível, e vai aparecendo */
+
+@keyframes slide-right {
+    0%{
+        transform: translate(0, 0)
+    }   
+    50%{
+        transform: translate(300px,0)
+    }  
+    100%{
+        transform: translate(0,0)
+    }  
+}
+
+.ball {
+    background: lightblue;
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+    animation: slide-right 1.5s ease infinite;
+}
+
+/* Alterar o estado de um ícone de sua preferência utilizando transform, é necessário fazer essa animação de uma das formas: utilizando scale() e skew() ou rotate() e translate() */
+
+@keyframes transform-90 {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(90deg) skew(10deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+img {
+    background: url('https://source.unsplash.com/random/?logo');
+    background-size: cover;
+    width: 120px;
+    height: 60px;
+
+    animation: transform-90 2.5s ease-in-out infinite;
+}
+
+/* Animar um botão com transition, fazendo com que o background-color dele mude de cor com uma transição suave */
+
+@keyframes recolor {
+
+    50%{
+        background: navy;
+    }
+}
+
+button {
+    border: none;
+    background: crimson;
+    padding: 8px 16px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    animation: recolor 3s infinite;
+}

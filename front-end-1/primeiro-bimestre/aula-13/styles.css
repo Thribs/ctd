@@ -1,0 +1,51 @@
+main {
+    padding: 32px;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0px);
+        opacity: 0;
+    }
+    25% {
+        transform: translate(0, -30px);
+        opacity: .5;
+    }
+    50% {
+        transform: translate(0, 30px);
+        opacity: 1;
+    }
+    75%{
+        transform: translate(0, -30px);
+        opacity: .5;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+}
+
+.ghost {
+    display: block;
+    font-size: 140px;
+    text-align: center;
+    animation: floating 3s infinite;
+}
+.main-button {
+    display: block;
+    margin: 0 auto;
+    color: white;
+    background: #2e77ca;
+    padding: 24px;
+    border: none;
+    border-radius: 12px;
+    font-size: 22px;
+
+    transition: 40s ease-in-out;
+}
+
+.main-button:hover {
+    background: rgb(52, 134, 228);
+    transform: scale(1.25) skew(20deg) translate(0,-50px);
+    transform: skew(36000deg);
+}
