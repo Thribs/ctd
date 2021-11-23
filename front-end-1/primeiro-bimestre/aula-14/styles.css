@@ -1,0 +1,34 @@
+ul {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #171717;
+    display: flex;
+    gap: 24px;
+    padding: 32px;
+    justify-content: center;
+}
+
+ul a {
+    color: white;
+    text-decoration: none;
+}
+
+.videos {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.video {
+    width: 400px;
+}
+
+.video img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
