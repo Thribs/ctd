@@ -1,0 +1,40 @@
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    padding: 8px 0;
+    width: 100vw;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;   
+}
+
+header ul li {
+    display: inline;
+    padding: 0 16px;
+}
+
+header a {
+    text-decoration: none;
+    color: #000;
+}
+
+#home {
+    height: 100vh;
+}
+
+#home img {
+
+    height: 100%;
+    width: 100%;
+}
+
+article {
+    display: flex;
+}
