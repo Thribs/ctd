@@ -1,0 +1,29 @@
+body {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas: 
+    'header header'
+    'aside main';
+}
+header {
+    grid-area: header;
+    position: fixed;
+    width: 100%;
+    background: gray;
+}
+
+.logo {
+    width: 40px;
+}
+
+aside {
+    grid-area: aside;
+}
+
+ul {
+    list-style: none;
+}
+
+main {
+    grid-area: main;
+}

@@ -1,0 +1,42 @@
+body {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas: 
+    'header header'
+    'aside main';
+}
+header {
+    grid-area: header;
+    position: sticky;
+    width: 100%;
+    background: gray;
+    top: 0;
+}
+
+.logo {
+    width: 40px;
+}
+
+aside {
+    grid-area: aside;
+}
+
+ul {
+    list-style: none;
+}
+
+main {
+    grid-area: main;
+}
+
+@media (max-width: 800px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    li {
+        padding: 4px 0;
+    }
+}
