@@ -1,4 +1,4 @@
-// Tem-se um conjunto de dados contendo a altura e o sexo (M ou F) de 15 pessoas. Faça um programa que calcule e escreva:
+console.log("\n// Tem-se um conjunto de dados contendo a altura e o sexo (M ou F) de 15 pessoas. Faça um programa que calcule e escreva:");
 const people = [
   {
     sexo: "F",
@@ -77,15 +77,15 @@ const people = [
   },
 ];
 
-// a maior e a menor altura do grupo;
-const tallest = function (group) {
+console.log("\n// a maior e a menor altura do grupo;");
+const tallest = (group) => {
   let maxHeight = 0;
   group.forEach((person) => {
     if (person.altura > maxHeight) maxHeight = Number(person.altura);
   });
   return maxHeight;
 };
-const shortest = function (group) {
+const shortest = (group) => {
   let minHeight = 0;
   group.forEach((person) => {
     if (minHeight == 0) minHeight = Number(person.altura);
@@ -96,8 +96,8 @@ const shortest = function (group) {
 console.log(tallest(people));
 console.log(shortest(people));
 
-// a média de altura das mulheres;
-const averageWomanHeight = function (group) {
+console.log("\n// a média de altura das mulheres;");
+const averageWomanHeight = (group) => {
   const womenGroup = group.filter((person) => person.sexo == "F");
   const heightsArray = womenGroup.map((person) => Number(person.altura));
   const average = heightsArray.reduce((average, current) =>
@@ -107,8 +107,8 @@ const averageWomanHeight = function (group) {
 };
 console.log(averageWomanHeight(people));
 
-// o número de homens.
-const countOfMen = function (group) {
+console.log("\n// o número de homens.");
+const countOfMen = (group) => {
     menGroup = group.filter((person) => person.sexo == "M");
     return menGroup.length;
 };
