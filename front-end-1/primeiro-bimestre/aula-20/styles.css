@@ -1,0 +1,21 @@
+.main-header {
+  background: red;
+  padding: 24px;
+}
+
+.main-header img {
+  width: 100px;
+}
+
+.main-header ul {
+  background: aliceblue;
+}
+
+.main-header ul li {
+  padding: 24px;
+}
+
+.main-header ul li a {
+  color: #000;
+}
+/*# sourceMappingURL=styles.css.map */
