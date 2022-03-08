@@ -1,6 +1,10 @@
 # local repositories
 local/
 
+#Vagrant build files
+.vagrant
+.vagrant.d
+
 # Logs
 logs
 *.log
