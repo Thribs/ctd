@@ -38,4 +38,3 @@ cards.forEach(card => card.remove());
 (function () {
     cards.forEach(card => parent.appendChild(card))
 })();
-  
