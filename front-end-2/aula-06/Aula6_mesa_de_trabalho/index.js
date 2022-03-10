@@ -25,7 +25,6 @@ const lightMode = () => {
 }
 
 const cards = document.querySelectorAll(".item");
-console.log(typeof cards);
 
 const parent = document.querySelector(".container")
 cards.forEach(card => card.remove());
@@ -38,3 +37,23 @@ cards.forEach(card => card.remove());
 (function () {
     cards.forEach(card => parent.appendChild(card))
 })();
+
+/* 
+Passo a passo para executar o desafio - Aula 7
+1 - Criar a opção de escolha do felino 
+2 - Verificar qual foi a escolha
+3 - Definir uma url da internet
+4 - Alteram o atributo "src"
+*/
+
+
+cards.forEach(card => {
+const button = document.createElement('button');
+button.innerText = "Trocar imagem";
+button.onclick = () => {
+    const imgSrc = prompt('Insira a URL da imagem que deseja')
+    const img = button.parentElement.querySelector('img')
+    img.setAttribute('src', imgSrc)
+}
+    card.appendChild(button)
+})
