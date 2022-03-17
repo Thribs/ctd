@@ -1,0 +1,1 @@
+const dividir = (a,b) => a/b
