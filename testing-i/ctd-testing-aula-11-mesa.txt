@@ -1,0 +1,21 @@
+Dev
+	Testes unitários
+	Testes de integração
+QA
+	Testes de caso de uso
+	Testes de fumaça
+	Testes de regressão
+	Testes Funcionais
+	Testes exploratórios
+	Testes de adequação
+UAT
+	Testes de acessibilidade
+	Testes de usabilidade
+Staging
+	Testes de carga
+	Testes de desempenho
+	Testes de carga
+	Testes de desempenho
+	Pen Testing
+	Teste de Segurança
+	Testes de interoperabilidade
