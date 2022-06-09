@@ -1,0 +1,3 @@
+enum Shift {
+    DAY, NIGHT
+}
