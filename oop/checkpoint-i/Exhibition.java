@@ -1,12 +1,12 @@
 import java.time.LocalDate;
 
-class Exposition {
+class Exhibition {
     private String name;
     private String location;
     private LocalDate startingDate;
     private LocalDate endingDate;
 
-    public Exposition(String name, String location, LocalDate startingDate, LocalDate endingDate) {
+    public Exhibition(String name, String location, LocalDate startingDate, LocalDate endingDate) {
         this.name = name;
         this.location = location;
         this.startingDate = startingDate;
@@ -45,7 +45,12 @@ class Exposition {
         this.endingDate = endingDate;
     }
 
-    public void lend() {
-        
+    public void borrow(Photo photo) {
+        photo.setExhibited(true);
+        System.out.println("Foto " + photo.getTitle() + " foi alugada.");
+    }
+
+    public String getCity() {
+        return this.location.split("-")[0];
     }
 }

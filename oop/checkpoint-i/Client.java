@@ -1,5 +1,3 @@
-import java.util.Objects;
-
 class Client {
     private String name;
     private String cpf;
@@ -37,6 +35,11 @@ class Client {
         this.cpf = cpf;
     }
 
+    public void purchase(Photo photo) {
+        photo.setSold();
+        System.out.println("Foto " + photo.getTitle() + " foi vendida.");
+    }
+
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
@@ -45,8 +48,4 @@ class Client {
         this.emailAddress = emailAddress;
     }
 
-    public void purchase() {
-        System.out.println("Client " + this.name + " purchased a photo");
-    }
-        
 }

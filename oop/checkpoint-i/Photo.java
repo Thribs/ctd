@@ -5,33 +5,57 @@ class Photo {
     private String series;
     private String captureLocation;
     private LocalDate captureDate;
-    private Integer sales;
+    private Integer sales = 0;
+    public boolean exhibited = false;
+    private Integer rating;
+    private double price = 0.0;
 
-    public Photo(String title, String series, String captureLocation, LocalDate captureDate) {
+    public Photo(String title, String series, String captureLocation, LocalDate captureDate, Integer rating) {
         this.title = title;
         this.series = series;
         this.captureLocation = captureLocation;
         this.captureDate = captureDate;
+        this.rating = rating;
     }
 
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public String getSeries() {
-        return series;
+        return this.series;
     }
 
     public String getCaptureLocation() {
-        return captureLocation;
+        return this.captureLocation;
     }
 
     public LocalDate getCaptureDate() {
-        return captureDate;
+        return this.captureDate;
     }
 
     public Integer getSales() {
-        return sales;
+        return this.sales;
+    }
+
+    public Integer getRating() {
+        return this.rating;
+    }
+
+    public double getPrice() {
+        this.price = this.rating * 1000;
+        return this.price;
+    }
+
+    public String isExhibited() {
+        if (exhibited) {
+            return "Sim, já participou de exposição";
+        }
+        return "Ainda não";
+    }
+
+    public void setExhibited(boolean exhibited) {
+        this.exhibited = exhibited;
     }
 
     public void setTitle(String title) {
@@ -42,12 +66,25 @@ class Photo {
         this.series = series;
     }
 
-    public void sell() {
+    public void setSold() {
+        this.price = this.rating * 1000;
         this.sales++;
     }
 
-    public void sort(Integer arg) {
-
+    @Override
+    public String toString() {
+        return "Dados da Foto:" + "\n" +
+                "Título = " + title + "\n" +
+                "Série = " + series + "\n" +
+                "Local = " + captureLocation + "\n" +
+                "Data = " + captureDate + "\n" +
+                "Unidades Vendidas = " + sales + "\n" +
+                "Já participou de Exposições? " + isExhibited() + "\n" +
+                "Classificação = " + rating + " ★" + "\n" +
+                "Valor = " + getPrice();
     }
 
+    public void sortPhotos() {
+        System.out.println("Fotos ordenadas por classificação");
+    }
 }
