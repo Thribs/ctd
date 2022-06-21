@@ -1,0 +1,17 @@
+{
+  "name": "calc",
+  "version": "0.0.1",
+  "description": "basic calculator",
+  "main": "calc.js",
+  "scripts": {
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "watch": "jest --watchAll"
+  },
+  "author": "Thiago Silva",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "jest": "^28.1.1"
+  }
+}
