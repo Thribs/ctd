@@ -1,0 +1,16 @@
+{
+  "name": "listas",
+  "version": "1.0.0",
+  "main": "app.js",
+  "author": "Thiago Silva",
+  "scripts": {
+    "start": "node app.js",
+    "test": "jest",
+    "watch": "jest --watchAll --coverage"
+  },
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "jest": "^28.1.1"
+  }
+}
