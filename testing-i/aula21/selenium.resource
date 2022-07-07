@@ -20,6 +20,7 @@ ${CHECKOUT_ZIP_CODE}             90210
 ${FINISH_BUTTON}                 css=#finish
 ${CONFIRMATION_MESSAGE}          css=.cart_item_title
 ${THANK_YOU_MESSAGE}             THANK YOU FOR YOUR ORDER
+${LOGIN_ERROR_MESSAGE}           do not match
 
 ***Keywords***
 Acessar o site
@@ -32,6 +33,13 @@ Fazer login
     Wait and Input Text    ${USER_FIELD}        ${USER}
     Wait and Input Text    ${PASSWORD_FIELD}    ${PASSWORD}
     Wait and Click         ${LOGIN_BUTTON}
+
+Fazer login com usuário incorreto
+    Wait and Input Text    ${USER_FIELD}             aaa
+    Wait and Input Text    ${PASSWORD_FIELD}         bbb
+    Wait and Click         ${LOGIN_BUTTON}
+    Page Should Contain    ${LOGIN_ERROR_MESSAGE}
+
 
 Adicionar um produto ao carrinho
     Wait and Click    ${ADD_TO_CART_BUTTON}
