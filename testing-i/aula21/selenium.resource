@@ -1,6 +1,6 @@
 *** Variables ***
 ${SITE}                        https://www.saucedemo.com/
-${BROWSER}                     Chrome
+${BROWSER}                     Firefox
 ${USER_FIELD}                  css=#user-names
 ${PASSWORD_FIELD}              css=#password
 ${LOGIN_BUTTON}                css=#login-button
