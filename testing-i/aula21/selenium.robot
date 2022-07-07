@@ -11,3 +11,4 @@ Processo de compra na loja SwagLabs
     Acessar carrinho
     Checkout
     Preencher dados de entrega
+    Finalizar pedido
