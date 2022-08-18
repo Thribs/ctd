@@ -34,6 +34,7 @@ public class DentistDaoH2 implements IDao<Dentist> {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return dentist;
     }
 
     @Override
