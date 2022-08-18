@@ -1,0 +1,1 @@
+create table if not exists patients(id int not null primary key auto_increment, first_name varchar(255) not null, last_name varchar(255) not null, registration_number varchar(20) not null, address_id int not null, foreign key (address_id) references addresses(id));

@@ -1,0 +1,3 @@
+create table if not exists addresses(id int not null primary key auto_increment, street varchar(255) not null, number int null default null, city varchar(255) not null, neighborhood varchar(255));
+create table if not exists patients(id int not null primary key auto_increment, first_name varchar(255) not null, last_name varchar(255) not null, registration_number varchar(20) not null, address_id int not null, foreign key (address_id) references addresses(id));
+create table if not exists dentists (id int primary key auto_increment, firstName varchar(255), lastName varchar(255), registrationNumber varchar(255))
