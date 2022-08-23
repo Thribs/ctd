@@ -12,6 +12,8 @@ import org.junit.jupiter.api.Test;
 import me.thribs.address_book.model.Contact;
 import static me.thribs.address_book.App.contacts;
 import static me.thribs.address_book.App.contactsReadFromFile;
+import static me.thribs.address_book.App.objectOutputStream;
+import static me.thribs.address_book.App.objectInputStream;
 import static me.thribs.address_book.App.writeObject;
 import static me.thribs.address_book.App.readObject;
 
@@ -36,14 +38,16 @@ public class AppTest {
 
     @Test
     public void testWriteToFile() {
-        writeObject(contacts);
-        assertNotNull(readObject());
+        writeObject(contacts, objectOutputStream);
+        assertNotNull(readObject(objectInputStream));
     }
-    
+
     @Test
     public void testReadFromFile() {
-        List<?> list = (List<?>) readObject();
-        for (Object o : list) { contactsReadFromFile.add((Contact) o); }
+        List<?> list = (List<?>) readObject(objectInputStream);
+        for (Object o : list) {
+            contactsReadFromFile.add((Contact) o);
+        }
         assertEquals(4, contactsReadFromFile.size());
-    }   
+    }
 }

@@ -14,10 +14,10 @@ public class App {
     public static final String CONTACTS_FILE_NAME = "contacts.bin";
     public static List<Contact> contacts = new ArrayList<Contact>();
     public static List<Contact> contactsReadFromFile = new ArrayList<Contact>();
-    public static FileOutputStream outputStream = getFileOutputStream();
-    public static ObjectOutputStream objectOutputStream = getObjectOutputStream();
-    public static FileInputStream inputStream = getFileInputStream();
-    public static ObjectInputStream objectInputStream = getObjectInputStream();
+    public static FileOutputStream fileOutputStream = getFileOutputStream(CONTACTS_FILE_NAME);
+    public static ObjectOutputStream objectOutputStream = getObjectOutputStream(fileOutputStream);
+    public static FileInputStream fileInputStream = getFileInputStream(CONTACTS_FILE_NAME);
+    public static ObjectInputStream objectInputStream = getObjectInputStream(fileInputStream);
 
     public static void main(String[] args) {
 
@@ -31,8 +31,8 @@ public class App {
         contacts.add(jack);
         contacts.add(jill);
 
-        writeObject(contacts);
-        List<?> list = (List<?>) readObject();
+        writeObject(contacts, objectOutputStream);
+        List<?> list = (List<?>) readObject(objectInputStream);
         for (Object o : list) {
             contactsReadFromFile.add((Contact) o);
         }
@@ -42,44 +42,49 @@ public class App {
         }
     }
 
-    public static FileOutputStream getFileOutputStream() {
+    public static FileOutputStream getFileOutputStream(String fileName) {
         try {
-            return new FileOutputStream(CONTACTS_FILE_NAME);
+            return new FileOutputStream(fileName);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
-    public static ObjectOutputStream getObjectOutputStream() {
+
+    public static ObjectOutputStream getObjectOutputStream(FileOutputStream fileStream) {
         try {
-            return new ObjectOutputStream(outputStream);
+            return new ObjectOutputStream(fileStream);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
-    public static FileInputStream getFileInputStream() {
+
+    public static FileInputStream getFileInputStream(String fileName) {
         try {
-            return new FileInputStream(CONTACTS_FILE_NAME);
+            return new FileInputStream(fileName);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
-    public static ObjectInputStream getObjectInputStream() {
+
+    public static ObjectInputStream getObjectInputStream(FileInputStream fileStream) {
         try {
-            return new ObjectInputStream(inputStream);
+            return new ObjectInputStream(fileStream);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
-    public static void writeObject(Object o) {
+
+    public static void writeObject(Object o, ObjectOutputStream outputStream) {
         try {
-            objectOutputStream.writeObject(o);
+            outputStream.writeObject(o);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
-    public static Object readObject() {
+
+    public static Object readObject(ObjectInputStream inputStream) {
         try {
-            return objectInputStream.readObject();
+            return inputStream.readObject();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
