@@ -1,0 +1,1 @@
+create table if not exists users(id integer not null primary key auto_increment, name varchar(255) not null, email varchar(255) not null, password varchar(255) not null, access_level varchar(255) not null default 'guest');
